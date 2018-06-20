@@ -80,8 +80,10 @@ Note: Click the Bluetooth icon, bottom right (Desktop) to configure your device.
 #  python obd_gui.py
 
 Note: Run, # python obd_gui_square.py to use the rounded rectangle gauge.
-
+To exit the program just press Control and C or Alt and Esc.
 Tap the display to cycle through the gauges!
 
-To exit the program just press Control and C or Alt and Esc.
+9. To record the data sensed from the sensors:
+#  cd pyobd
+#  python obd_recorder.py
 Enjoy and drive safe!</pre>
