@@ -48,11 +48,11 @@ Install these components using the command:
 #  sudo reboot 
 
 Next, download the OBD-Pi Software direct from GitHub.
-(https://github.com/Pbartek/pyobd-pi-TFT.git)
+(https://github.com/sakurusurya2000/pyobd.git)
 
 Or using the command:
 #  cd ~
-#  git clone https://github.com/Pbartek/pyobd-pi-TFT.git
+#  git clone https://github.com/sakurusurya2000/pyobd.git
 
 Vehicle Installation
 The vehicle installation is quite simple.
@@ -75,7 +75,7 @@ The vehicle installation is quite simple.
 Note: Click the Bluetooth icon, bottom right (Desktop) to configure your device. Right click on your Bluetooth device to bring up Connect To: SPP Dev.
 
 8. Open up Terminal and run:
-#  cd pyobd-pi-TFT
+#  cd pyobd
 #  sudo su
 #  python obd_gui.py
 
