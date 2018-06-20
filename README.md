@@ -86,4 +86,5 @@ Tap the display to cycle through the gauges!
 9. To record the data sensed from the sensors:
 #  cd pyobd
 #  python obd_recorder.py
+
 Enjoy and drive safe!</pre>
