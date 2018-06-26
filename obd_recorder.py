@@ -84,7 +84,7 @@ class OBD_Recorder():
         
         int overspeeding=0;
         if speed>=60:
-            overspeeding++;
+            overspeeding+=overspeeding;
         int braking=0;
         int acc=0;
         int risk_score= ((3*overspeeding)+(2*(braking+accelaration)) / );
