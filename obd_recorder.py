@@ -18,7 +18,7 @@ class OBD_Recorder():
         localtime = time.localtime(time.time())
         filename = path+"car-"+str(localtime[0])+"-"+str(localtime[1])+"-"+str(localtime[2])+".log"
         self.log_file = open(filename, "w", 128)
-        self.log_file.write("Time,RPM,MPH,Throttle,Load,Fuel Status,Fuel trim percent\n");
+        self.log_file.write("Time,RPM,MPH,Throttle,Load,Fuel Status,Risk Score\n");
 
         for item in log_items:
             self.add_log_item(item)
@@ -82,6 +82,16 @@ class OBD_Recorder():
         rps = rpm/60
         mps = (speed*1.609*1000)/3600
         
+        int overspeeding=0;
+        if speed>=60:
+            overspeeding++;
+        int braking=0;
+        if rpm && speed:
+            braking++;
+        int acceration=0;
+        if rpm && speed:
+            accelaration++;
+        int risk_score= ((3*overspeeding)+(2*(braking+accelaration)) / );
         primary_gear = 85/46 #street triple
         final_drive  = 47/16
         
@@ -94,7 +104,7 @@ class OBD_Recorder():
         return gear
         
 username = getpass.getuser()  
-logitems = ["rpm", "speed", "throttle_pos", "load", "fuel_status","fuel_trim_percent"]
+logitems = ["rpm", "speed", "throttle_pos", "load", "fuel_status","risk_score"]
 o = OBD_Recorder('/home/'+username+'/pyobd/log/', logitems)
 o.connect()
 
