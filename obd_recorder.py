@@ -86,11 +86,7 @@ class OBD_Recorder():
         if speed>=60:
             overspeeding++;
         int braking=0;
-        if rpm && speed:
-            braking++;
-        int acceration=0;
-        if rpm && speed:
-            accelaration++;
+        int acc=0;
         int risk_score= ((3*overspeeding)+(2*(braking+accelaration)) / );
         primary_gear = 85/46 #street triple
         final_drive  = 47/16
